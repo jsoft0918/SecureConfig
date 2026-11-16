@@ -1,0 +1,6 @@
+# Shows a "Sponsor" button at the top of the GitHub repository.
+# Uncomment only the entries you use and replace the placeholders with your own IDs/URLs.
+# github: [jsoft0918]          # GitHub Sponsors (after your account is approved)
+# buy_me_a_coffee: YOUR_ID          # https://www.buymeacoffee.com
+# ko_fi: YOUR_ID                    # https://ko-fi.com
+# custom: ["https://toss.me/YOUR_ID"]   # custom link, e.g. a payment/donation page

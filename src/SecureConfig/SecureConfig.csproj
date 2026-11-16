@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    Read-only library for encrypted config. No external package dependencies.
+      - netstandard2.0 : .NET Framework 4.6.2+ (including ASP.NET 4.8) — Windows CNG (bcrypt.dll)
+      - net8.0         : .NET 8 / 9 / 10 — System.Security.Cryptography.AesGcm
+    Windows only. Writing (encryption, saving environment variables, key file ACLs) lives only in the editor (SecureConfig.Editor).
+  -->
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.0;net8.0</TargetFrameworks>
+    <LangVersion>7.3</LangVersion>
+    <RootNamespace>SecureConfig</RootNamespace>
+    <AssemblyName>SecureConfig</AssemblyName>
+    <Product>SecureConfig</Product>
+    <Description>Encrypted, per-environment (local/dev/stg/prod) app settings for .NET on Windows Server. AES-256-GCM, zero dependencies, live reload without restart. An air-gapped / on-premise alternative to AWS Parameter Store.</Description>
+    <PackageId>SecureConfig</PackageId>
+    <PackageTags>configuration;secrets;encryption;aes-gcm;environment;parameter-store;on-premise;air-gapped;aspnet</PackageTags>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>

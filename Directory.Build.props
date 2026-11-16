@@ -1,0 +1,19 @@
+<Project>
+
+  <!-- Settings shared by all projects -->
+  <PropertyGroup>
+    <Version>1.0.0</Version>
+    <Authors>jsoft</Authors>
+    <Company>jsoft</Company>
+    <Copyright>Copyright (c) 2026 jsoft</Copyright>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <RepositoryUrl>https://github.com/jsoft0918/SecureConfig</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/jsoft0918/SecureConfig</PackageProjectUrl>
+    <RepositoryType>git</RepositoryType>
+
+    <Deterministic>true</Deterministic>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+
+</Project>

@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <!--
+    SecureConfig ASP.NET Core sample (.NET 8 / 9 / 10, Windows)
+
+    In a real project, use this instead of the ProjectReference:
+      <PackageReference Include="SecureConfig" Version="1.0.0" />
+  -->
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RollForward>Major</RollForward>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SecureConfig\SecureConfig.csproj" />
+  </ItemGroup>
+
+</Project>

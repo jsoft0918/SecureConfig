@@ -1,0 +1,30 @@
+{
+  "local": {
+    "DB_MAIN": "Server=localhost;Database=SampleShop;User Id=dev;Password=local-dev-password;TrustServerCertificate=True",
+    "PAYMENT_API_KEY": "sample-local-key-0000",
+    "OTP_MODE": "off",
+    "RATE_LIMIT_PER_MIN": "1000",
+    "FEATURE_NEW_CHECKOUT": "true"
+  },
+  "dev": {
+    "DB_MAIN": "Server=dev-db.example.internal;Database=SampleShop;User Id=app;Password=dev-password-change-me",
+    "PAYMENT_API_KEY": "sample-dev-key-1111",
+    "OTP_MODE": "optional",
+    "RATE_LIMIT_PER_MIN": "600",
+    "FEATURE_NEW_CHECKOUT": "true"
+  },
+  "stg": {
+    "DB_MAIN": "Server=stg-db.example.internal;Database=SampleShop;User Id=app;Password=stg-password-change-me",
+    "PAYMENT_API_KEY": "sample-stg-key-2222",
+    "OTP_MODE": "required",
+    "RATE_LIMIT_PER_MIN": "600",
+    "FEATURE_NEW_CHECKOUT": "false"
+  },
+  "prod": {
+    "DB_MAIN": "Server=prd-db.example.internal;Database=SampleShop;User Id=app;Password=prod-password-change-me",
+    "PAYMENT_API_KEY": "sample-prod-key-3333",
+    "OTP_MODE": "required",
+    "RATE_LIMIT_PER_MIN": "300",
+    "FEATURE_NEW_CHECKOUT": "false"
+  }
+}

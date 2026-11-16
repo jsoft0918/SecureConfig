@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    SecureConfig Editor (.NET 10, WinForms) - handles both reading and writing
+      - Reading / decryption format: reuses SecureConfig.dll (read-only, netstandard2.0) as is
+      - Writing (encryption, system environment variable storage, key file ACL, backups): this project's Core folder
+    Deployment: build.bat → dist\editor\SecureConfigEditor.exe (self-contained single file, no runtime install needed)
+  -->
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <AssemblyName>SecureConfigEditor</AssemblyName>
+    <RootNamespace>SecureConfig.Editor</RootNamespace>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationHighDpiMode>SystemAware</ApplicationHighDpiMode>
+    <Product>SecureConfig Editor</Product>
+    <SatelliteResourceLanguages>en</SatelliteResourceLanguages>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SecureConfig\SecureConfig.csproj" />
+  </ItemGroup>
+
+</Project>

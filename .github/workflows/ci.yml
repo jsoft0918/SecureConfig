@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  windows:
+    name: Build & test (Windows)
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-dotnet@v5
+        with:
+          global-json-file: global.json
+      - name: Test (net10 / key file ACL / .NET Framework 4.8)
+        shell: cmd
+        run: tests\run-tests.bat
+      - name: Build samples
+        run: dotnet build SecureConfig.sln -c Release
+      - name: Build dist
+        shell: cmd
+        run: build.bat
+      - uses: actions/upload-artifact@v5
+        with:
+          name: dist
+          path: |
+            dist/lib
+            dist/editor/SecureConfigEditor.exe
+            dist/nuget

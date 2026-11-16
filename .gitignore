@@ -1,0 +1,28 @@
+# ---- build output
+bin/
+obj/
+dist/
+publish/
+.vs/
+*.user
+
+# ---- test fixtures (generated keys / ciphertext)
+tests/out/
+
+# ---- SECRETS: never commit these
+# Plaintext config JSON exported from the editor contains real secrets.
+# Keep it in a password manager / secure vault, not in the repository.
+*.json
+!global.json
+!**/Properties/launchSettings.json
+!.github/**/*.json
+*.json.bak
+*.key
+backup/
+secrets/
+
+# fake-value sample (the ONLY json file allowed in the repo besides global.json)
+!samples/sample-config.json
+
+# Korean docs for the author only (not published)
+_private_ko/

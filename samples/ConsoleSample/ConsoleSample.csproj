@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!--
+    SecureConfig console sample (.NET 8 / 9 / 10, Windows)
+
+    In a real project, use one of the following instead of the ProjectReference below.
+      NuGet      : <PackageReference Include="SecureConfig" Version="1.0.0" />
+      Direct DLL :<Reference Include="SecureConfig"><HintPath>..\lib\SecureConfig\net8.0\SecureConfig.dll</HintPath></Reference>
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RollForward>Major</RollForward>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SecureConfig\SecureConfig.csproj" />
+  </ItemGroup>
+
+</Project>

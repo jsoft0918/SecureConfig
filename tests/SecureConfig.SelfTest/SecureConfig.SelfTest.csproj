@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Self test: JSON / encrypt-decrypt / import / reader (change detection, keep last known good on error) / key file ACL.
+       Run: tests\run-tests.bat (after building: SelfTest.exe <output-folder> [acl])
+       Writes the net48 check files (key.txt, enc1.txt ...) to the output folder → tests\net48-check.ps1 -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0-windows</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>disable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\SecureConfig\SecureConfig.csproj" />
+    <ProjectReference Include="..\..\src\SecureConfig.Editor\SecureConfig.Editor.csproj" />
+  </ItemGroup>
+
+</Project>

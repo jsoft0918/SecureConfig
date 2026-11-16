@@ -52,7 +52,7 @@ internal sealed partial class MainForm : Form
         KeyPreview = true;
 
         // ---- Toolbar 1: config variable
-        var tsVar = new ToolStrip { GripStyle = ToolStripGripStyle.Hidden, Padding = new Padding(4, 2, 4, 2) };
+        var tsVar = new ToolStrip { GripStyle = ToolStripGripStyle.Hidden, Padding = new Padding(4, 2, 4, 2), Font = Ui.BaseFont };
         tsVar.Items.Add(new ToolStripLabel("Config variable (system environment variable):") { Font = new Font(Ui.BaseFont, FontStyle.Bold) });
         _varCombo = new ToolStripComboBox { DropDownStyle = ComboBoxStyle.DropDownList, Width = 240, Font = Ui.MonoFont };
         _varCombo.SelectedIndexChanged += (_, _) => OnVariableSelected();
@@ -62,7 +62,7 @@ internal sealed partial class MainForm : Form
         tsVar.Items.Add(new ToolStripButton("Manage key...", null, (_, _) => ManageKey()));
 
         // ---- Toolbar 2: actions
-        var ts = new ToolStrip { GripStyle = ToolStripGripStyle.Hidden, Padding = new Padding(4, 2, 4, 2) };
+        var ts = new ToolStrip { GripStyle = ToolStripGripStyle.Hidden, Padding = new Padding(4, 2, 4, 2), Font = Ui.BaseFont };
         ts.Items.Add(new ToolStripButton("Reload (F5)", null, (_, _) => Reload(true)));
         _tbSave = new ToolStripButton("Save (Ctrl+S)", null, (_, _) => Save()) { Font = new Font(Ui.BaseFont, FontStyle.Bold) };
         ts.Items.Add(_tbSave);
@@ -76,7 +76,7 @@ internal sealed partial class MainForm : Form
         ts.Items.Add(new ToolStripButton("Restore from backup...", null, (_, _) => RestoreBackup()));
 
         // ---- Status bar
-        var ss = new StatusStrip();
+        var ss = new StatusStrip { Font = Ui.BaseFont }; // toolbars default to the system menu font; keep one font everywhere
         _stConfig = new ToolStripStatusLabel { BorderSides = ToolStripStatusLabelBorderSides.Right };
         _stKey = new ToolStripStatusLabel { BorderSides = ToolStripStatusLabelBorderSides.Right };
         _stMessage = new ToolStripStatusLabel { Spring = true, TextAlign = ContentAlignment.MiddleLeft };

@@ -43,6 +43,11 @@ string otp = cfg.Get("OTP_MODE", "off");    // optional value with a default
 | Create / rotate the master key (automatic re-encryption on rotation) | Finds the key, decrypts, detects tampering |
 | JSON import / export, automatic backup and restore | If a broken value shows up, **keeps running on the last good value** |
 
+<p align="center">
+  <img src="docs/images/editor.png" alt="SecureConfig Editor: environments on the left, variables of the selected environment on the right, values masked by default" width="820">
+  <br><sub>The editor with <code>samples/sample-config.json</code> imported. Values are masked until you tick <b>Show / edit values</b>.</sub>
+</p>
+
 ---
 
 ## 📋 Requirements
@@ -137,6 +142,10 @@ Each call only compares the stored ciphertext string (a few microseconds) and de
 Need a new secret? Editor → pick the environment → type `name / value` in the last row → **Save**. Done.
 **Duplicate** a whole environment (`stg` → `prod`) and just edit the values, or **import/export JSON** to migrate or replicate servers.
 
+<p align="center">
+  <img src="docs/images/editor-values.png" alt="SecureConfig Editor with Show / edit values turned on: the local environment's values are editable, and a new variable can be typed in the last row" width="820">
+</p>
+
 ---
 
 ## 🧠 How it works
@@ -186,7 +195,7 @@ git clone https://github.com/jsoft0918/SecureConfig.git
 cd SecureConfig
 ```
 
-- Just want the binaries? Download `SecureConfigEditor.exe` and the DLLs from [Releases](https://github.com/jsoft0918/SecureConfig/releases).
+- Just want the binaries? From the [latest release](https://github.com/jsoft0918/SecureConfig/releases/latest) download `SecureConfigEditor.exe` (the editor) and `SecureConfig-<version>-lib.zip` (the DLLs: `netstandard2.0` for .NET Framework, `net8.0` for .NET 8+).
 - Build it yourself: `build.bat` (requires .NET SDK 10) → everything lands in `dist\`.
 
 ### 1) Create a key and settings on your PC
